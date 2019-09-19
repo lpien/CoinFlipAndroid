@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:background="@mipmap/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/left"
+                    android:layout_width="150dp"
+                    android:layout_height="259dp"
+                    android:maxWidth="42dp"
+                    android:maxHeight="42dp"
+                    android:src="@mipmap/heads"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="50dp"
+                    tools:layout_editor_absoluteX="27dp"
+                    tools:layout_editor_absoluteY="97dp" />
+
+                <ImageView
+                    android:id="@+id/right"
+                    android:layout_width="150dp"
+                    android:layout_height="259dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="50dp"
+                    android:maxWidth="42dp"
+                    android:maxHeight="42dp"
+                    android:src="@mipmap/tails"
+                    tools:layout_editor_absoluteX="225dp"
+                    tools:layout_editor_absoluteY="97dp" />
+
+            </LinearLayout>
+
+        <Button
+            android:id="@+id/button_flip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:onClick="flipCoins"
+            android:text="FLIP!" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentLeft="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:text="Heads"
+                    android:textSize="20dp"
+                    android:id="@+id/head"/>
+
+                <TextView
+                    android:id="@+id/headCounter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/head"
+                    android:layout_alignParentBottom="true"
+                    android:textColor="#fff"
+                    android:layout_marginBottom="0dp"
+                    android:text="0"
+                    android:textSize="40dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="20dp"
+                android:layout_alignParentRight="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tails"
+                    android:textSize="20dp"
+                    android:textColor="#fff"
+                    android:id="@+id/tail"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:layout_below="@id/tail"
+                    android:textSize="40dp"
+                    android:textColor="#fff"
+                    android:id="@+id/tailCounter" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
